@@ -25,8 +25,6 @@ class Cuenta:
             self.saldo -= valor
             operacion = Operacion(destino, datetime.now(), -valor)
             self.operaciones.append(operacion)
-
-            # Actualizar saldo del destinatario
             destinatario = buscar_cuenta_por_numero(destino)
             if destinatario:
                 destinatario.saldo += valor
@@ -52,7 +50,6 @@ class Operacion:
         return f"Pago {tipo} {name_cuenta}"
 
 
-# Inicializar la aplicación con las cuentas y contactos
 BD = [
     Cuenta("21345", "Arnaldo", 200, ["123", "456"]),
     Cuenta("123", "Luisa", 400, ["456"]),
