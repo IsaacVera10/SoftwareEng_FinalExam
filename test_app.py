@@ -1,5 +1,5 @@
 import unittest
-from app import app
+from app import buscar_cuenta_por_numero, app
 
 class BilleteraTestCase(unittest.TestCase):
     def setUp(self):
